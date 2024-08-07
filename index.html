@@ -54,11 +54,11 @@
             background-color: #e53935;
         }
         .my-custom-title {
-            font-family: 'Arial', sans-serif; /* Cambia la fuente según tus necesidades */
+            font-family: Verdana, Geneva, Tahoma, sans-serif; /* Cambia la fuente según tus necesidades */
         }
 
         .my-custom-content {
-            font-family: 'Courier New', monospace; /* Cambia la fuente según tus necesidades */
+            font-family: Verdana, Geneva, Tahoma, sans-serif; /* Cambia la fuente según tus necesidades */
         }
     </style>
     <!-- Incluye SweetAlert2 desde CDN -->
@@ -85,15 +85,17 @@
         }
 
         // Evento para el botón "Sí"
-        Swal.fire({
-            title: '¡TE AMO!',
-            text: 'YO TAMBIEN TE AMARÍA SI FUERAS UN MONITO CHIQUITITO!',
-            icon: 'success',
-            confirmButtonText: '¡Gracias!',
-            customClass: {
-                title: 'my-custom-title',
-                content: 'my-custom-content'
-            }
+        botonSi.addEventListener('click', () => {
+            Swal.fire({
+                title: '¡TE AMO!',
+                text: 'YO TAMBIEN TE AMARÍA SI FUERAS UN MONITO CHIQUITITO!',
+                icon: 'success',
+                confirmButtonText: '¡Gracias!',
+                customClass: {
+                    title: 'my-custom-title',
+                    content: 'my-custom-content'
+                }
+            });
         });
 
         // Evento para el botón "No"
