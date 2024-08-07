@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pregunta del Monito</title>
+    <title>Lucas Pag Love</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -53,6 +53,13 @@
         #no:hover {
             background-color: #e53935;
         }
+        .my-custom-title {
+            font-family: 'Arial', sans-serif; /* Cambia la fuente según tus necesidades */
+        }
+
+        .my-custom-content {
+            font-family: 'Courier New', monospace; /* Cambia la fuente según tus necesidades */
+        }
     </style>
     <!-- Incluye SweetAlert2 desde CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -78,13 +85,15 @@
         }
 
         // Evento para el botón "Sí"
-        botonSi.addEventListener('click', () => {
-            Swal.fire({
-                title: '¡TE AMO!',
-                text: 'YO TAMBIEN TE AMARÍA SI FUERAS UN MONITO CHIQUITITO!',
-                icon: 'success',
-                confirmButtonText: '¡Gracias!'
-            });
+        Swal.fire({
+            title: '¡TE AMO!',
+            text: 'YO TAMBIEN TE AMARÍA SI FUERAS UN MONITO CHIQUITITO!',
+            icon: 'success',
+            confirmButtonText: '¡Gracias!',
+            customClass: {
+                title: 'my-custom-title',
+                content: 'my-custom-content'
+            }
         });
 
         // Evento para el botón "No"
